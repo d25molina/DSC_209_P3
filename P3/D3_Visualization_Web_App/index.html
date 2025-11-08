@@ -41,9 +41,45 @@
     <label><b>Legend:</b></label>
   </div>
 </div>
+<div id="writeup">
 <h2>Write-up</h2>
-<p>First Paragraph</p>
-<p>Second Paragraph</p>
-<p>Third Paragraph</p>
+  <p style="text-indent: 2em;">
+  For our submission, we chose to create a line chart plotting the quarterly greenhouse gas emissions by region.  
+  We recognized that the most significant component of our dataset was the period-over-period change in emissions, which could reveal trends over time. 
+  We discussed how we wanted to create an interactive visual that utilized the additional categorical components available.  </p>
+  
+  <p style="text-indent: 2em;">
+  As is often the case, it is useful to compare trends between multiple segments.  In our dataset, emissions were broken down by a variety of regions that are aggregated by geo-location, as well as economic development (for example: advanced economies vs emerging economies).  Additionally, our dataset made available specific gas emissions totals, as well as emissions by industry for each region.
+  </p>
+  
+  <p style="text-indent: 2em;">Given these categorical variables, we considered the most effective dynamic visualization.  We determined that, given the dataset’s quarterly granularity, we would not allow the date to be a manipulated feature.
+  </p>
+
+  <p style="text-indent: 2em;">Additionally, we thought our visualization would be most intuitive if we allowed for multiple selections by region, but limited industry and type of gas emission to only a single selection.  Thus, multiple categories could be compared over the same period, industry, and gas emission type.  If we allowed for multiple selections across more than one category, our line chart would quickly become way too cluttered.
+  </p>
+
+  <p style="text-indent: 2em;">We met twice over video calls to discuss our project.  We remained in frequent communication over Discord and collaborated using GitHub, developing our code independently, then publishing as individual branches for the rest of the team to review and ultimately merge approved updates to our main branch.
+  </p>
+
+  <p style="text-indent: 2em;">Prior to our first meeting, we independently generated basic visualizations to brainstorm our final project.  
+  </p>
+
+  <p style="text-indent: 2em;">Our first meeting was for the checkpoint submission, where we aligned on the dataset and what visualization we wanted to develop for the final submission.  During this meeting, we reviewed the data and took note of the features available for us to program into dynamic selections.
+  </p>
+
+  <p style="text-indent: 2em;">I (Matt Zidell) spent about 2.5 hours setting up our code base.  I transformed the dataset so that rows represented specific quarter data entries (it was published with quarterly data spanning as columns, rather than as rows), and then transformed the dataset into a JSON file.  I also created a wireframe HTML page, main.js, and main.css, for the team to build off of.  I then organized the GitHub repository for the team to develop from.  I built a preliminary selection box that included all regions in the dataset, but we moved on to implement an improved version that used check boxes.  I also drafted our final submission write-up.
+  </p>
+
+  <p style="text-indent: 2em;">Jacob Sease spent 3-4 hours building from this framework to implement our time series chart and necessary dynamic features.  He built the SVG container that generated our scaled y-axis, the x-axis spanning the entire dataset duration, and lines plotted for each region selected.  He also developed the improved region selector using check boxes, as well as the single selection options for gas type and industry.  The design choice for the latter two options was intentional to only allow a single selection.
+  </p>
+
+  <p style="text-indent: 2em;">Dimas Molina spent about 2.5 hours constructing the legend that would be dynamic to identify the regions selected and their colored line.  He restructured the format of the axes and improved the overall styling/usability of the visualization.
+  </p>
+
+  <p style="text-indent: 2em;">Most of our time was spent developing the visualization using D3 and confirming our intended features executed as intended.  Our alignment on design, user experience, and use of GitHub as a collaborative tool helped streamline our workflows.
+  </p>
+
+</div>
+
 </body>
 </html>

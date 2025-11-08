@@ -5,7 +5,7 @@ import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 // ---------------------------
 async function loadEmissionData() {
   try {
-    const response = await fetch('./quarterly_greenhouse_long.json');
+    const response = await fetch('./Data/quarterly_greenhouse_long.json');
     const emissionData = await response.json();
     return emissionData;
   } catch (error) {
