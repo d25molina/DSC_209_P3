@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="main.js" type="module"></script>
+  <title>Greenhouse Gas Emissions</title>
+</head>
+<body>
+  <h1>Greenhouse Gas Emissions</h1>
 
-    <link rel="stylesheet" href="main.css" />
-    <script src="main.js" type="module"></script>
-    <title>Greenhouse Gas Emissions</title>
-  </head>
-  <body>
-    <h1>Greenhouse Gas Emissions</h1>
+<div id="selectors-container">
+  <p><i>The following interactive visualization allows us to
+    explore quarterly greenhouse gas emissions data across different regions,
+    gas types, and industries. Use the selectors on the right to customize the plot.</i>
+  </p>
 
-    <div id="Regions">
-       <label for="Regions">Choose Regions:</label>
-       <select id="Regions_Selector" name="Regions" multiple>
-       </select>
-    </div>
-    <svg id="gas_plot"></svg>
-  </body>
+  <!-- Region Selector -->
+  <div id="Regions">
+    <label>Choose Regions:</label>
+    <div id="Regions_Selector" class="selector-box"></div>
+  </div>
+
+  <!-- Gas Type Selector -->
+  <div id="Gas">
+    <label for="gas_select">Choose Gas Type:</label>
+    <div id="Gas_Selector"></div>
+  </div>
+
+  <!-- Industry Selector -->
+  <div id="Industry">
+    <label for="industry_select">Choose Industry:</label>
+    <div id="Industry_Selector"></div>
+  </div>
+</div>
+<div id="chart-container">
+  <!-- Chart -->
+  <svg id="gas_plot"></svg>
+  <div id="legend">
+    <label><b>Legend:</b></label>
+  </div>
+</div>
+<h2>Write-up</h2>
+<p>First Paragraph</p>
+<p>Second Paragraph</p>
+<p>Third Paragraph</p>
+</body>
 </html>
