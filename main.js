@@ -5,12 +5,13 @@ import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 // ---------------------------
 async function loadEmissionData() {
   const localPath = './P3/D3_Visualization_Web_App/Data/quarterly_greenhouse_long.json';
+  const drivePath = 'https://drive.google.com/uc?export=download&id=19gFWLud6X7T8ThlX4wLJvWTqXCnRipMw';
   const ghPagesPath = 'https://raw.githubusercontent.com/mattzidell/DSC_209_P3/main/P3/D3_Visualization_Web_App/Data/quarterly_greenhouse_long.json';
   const host = window.location.hostname;
   const isLocalhost = host === 'localhost' || host === '127.0.0.1' || host === '';
   const prefersRemote = host.endsWith('github.io') && !isLocalhost;
-  // Try the GitHub-hosted JSON first when running on Pages, then fall back to the local copy
-  const sources = prefersRemote ? [ghPagesPath, localPath] : [localPath];
+  // Try the Google Drive JSON first when running on Pages, then fall back to other copies
+  const sources = prefersRemote ? [drivePath, ghPagesPath, localPath] : [localPath];
 
   for (const url of sources) {
     try {
