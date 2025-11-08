@@ -40,6 +40,7 @@ async function loadEmissionData() {
 }
 
 const emissionData = await loadEmissionData();
+console.log('emissionData:', emissionData);
 // ---------------------------
 // 2. Selectors
 // ---------------------------
